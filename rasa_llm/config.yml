@@ -1,0 +1,13 @@
+recipe: default.v1
+assistant_id: 20250326-132000-toasted-guava  # Replace with your unique identifier
+language: en
+pipeline:
+  - name: CompactLLMCommandGenerator
+    llm:
+      model_group: ollama_llm
+      model: gemma3:12b
+      api_base: http://localhost:11434
+
+policies:
+  - name: FlowPolicy
+  - name: IntentlessPolicy
